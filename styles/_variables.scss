@@ -1,0 +1,33 @@
+$colors: (
+    primary: #00cec9,
+    secondary: #dfe6e9,
+    tertiary: #000,
+    white: #fff,
+    dark-gray: #636e72
+);
+
+$fontSizes: (
+    small: 16px,
+    regular: 18px,
+    medium: 20px,
+    large: 24px,
+    extra-large: 35px
+);
+
+$fontWeights: (
+    light: 400,
+    medium: 600,
+    bold: 900
+);
+
+@function color($color) {
+    @return map-get($map: $colors, $key: $color);
+}
+
+@function fontSize($fontSize) {
+    @return map-get($map: $fontSizes, $key: $fontSize);
+}
+
+@function fontWeight($fontWeight) {
+    @return map-get($map: $fontWeights, $key: $fontWeight);
+}

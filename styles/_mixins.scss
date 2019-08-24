@@ -1,0 +1,42 @@
+@import "variables";
+
+@mixin circleBorder($borderSize, $color, $padding) {
+    display: inline-block;
+    border-radius: 50%;
+    border: $borderSize solid color($color);
+    padding: $padding;
+}
+
+@mixin squareBorder($borderSize, $color, $borderRadius, $dimension) {
+    border: $borderSize solid color($color);
+    border-radius: $borderRadius;
+    width: $dimension;
+    height: $dimension;
+    display: inline-block;
+    text-align: center;
+}
+
+@mixin faIconDesign($color, $fontSize) {
+    color: color($color);
+    font-size: fontSize($fontSize);
+}
+
+@mixin pseudoTextDesign($content, $color) {
+    content: $content;
+    color: color($color);
+}
+
+@mixin flexContent($flexGrow, $alignment) {
+    flex-grow: $flexGrow;
+    text-align: $alignment;
+}
+
+@mixin triangleRight($borderSize, $borderRadius) {
+    width: 0;
+    height: 0;
+    border-top: $borderSize solid transparent;
+    border-bottom: $borderSize solid transparent;
+    border-left: $borderSize solid #00cec9;
+    display: inline-block;
+    border-radius: $borderRadius;
+}

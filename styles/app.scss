@@ -1,0 +1,154 @@
+@import "utility";
+@import "mixins";
+
+body {
+    @extend %body-styles;
+}
+
+.header,
+.navbar {
+    padding: 1% 7%;
+}
+
+.container,
+.main {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.container {
+    color: color(dark-gray);
+
+    .header, 
+    .navbar,
+    .gallery {
+       @extend %flex;
+    }
+}
+
+.header {
+    border-bottom: 2px solid color(secondary);
+    padding: 0.5% 7%;
+
+    .links {
+        @include flexContent(2, left);
+
+        li {
+            padding-right: 2%;
+        }
+
+        li:last-child {
+            padding-right: 0;
+        }
+
+        li:before {
+            @include pseudoTextDesign('|', secondary);
+        }
+
+        .icon {
+            @include squareBorder(2px, primary, 3px, 10px);
+            line-height: 6px;
+            margin: 0 5px;
+
+            .triangle-right {
+                @include triangleRight(4px, 5px);
+            }
+        }
+    }
+
+    .social-icons {
+        @include flexContent(1, right);
+
+        li {
+            @include circleBorder(1px, secondary, 6px);
+        }
+
+        i {
+            @include faIconDesign(tertiary, small);
+            font-weight: fontWeight(small);
+        }
+    }
+}
+
+.navbar {
+    margin: 0.5% 0;
+}
+
+.logo {
+    @include flexContent(1, left);
+    
+    .title {
+        color: color(tertiary);
+        font-size: fontSize(extra-large);
+        font-weight: fontWeight(medium);  
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+}
+
+
+.nav-links {
+    @include flexContent(2, right);
+
+    li {
+        padding: 0 1.5%;
+    }
+
+    .link {
+        display: block;
+        font-size: fontSize(large);
+        text-transform: uppercase;
+    }
+
+    hr {
+        border: 1px solid color(primary);
+        margin: 10% 0;
+        width: 20px;
+    }
+}
+
+.image-slider {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+.gallery {
+    padding: 3% 7%;
+
+    .item {
+        background-color: color(primary);
+        color: white;
+        margin: 0 2.5%;
+        padding: 3%;
+        border-radius: 2%;
+        position: relative;
+
+        .title {
+            font-size: fontSize(medium);
+            font-weight: fontWeight(medium);
+        }
+
+        .icon {
+            float: right;
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            background-color: white;
+            margin-top: 8%;
+            position: absolute;
+            right: -35px;
+            border: 2px solid color(primary);
+            z-index: 2;
+
+            i {
+                @include faIconDesign(primary, extra-large);
+                padding: 20px;
+            }
+        }
+    }
+}

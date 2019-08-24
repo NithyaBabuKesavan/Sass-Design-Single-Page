@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arkitekt</title>
+    <link rel="stylesheet" href="styles/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css"/>
+    <script src="https://kit.fontawesome.com/b8566f803e.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <ul class="links">
+                <li>
+                    <span class="icon">
+                        <span class="triangle-right"></span>
+                    </span>
+                    <span>terms & conditions</span>
+                </li>
+                <li>
+                    <span class="icon">
+                        <span class="triangle-right"></span>
+                    </span>
+                    <span>about us</span>
+                </li>
+                <li>
+                    <span class="icon">
+                        <span class="triangle-right"></span>
+                    </span>
+                    <span>login</span>
+                </li>
+                <li>
+                    <span class="icon">
+                        <span class="triangle-right"></span>
+                    </span>
+                    <span>contact us</span>
+                </li>
+            </ul>
+            <ul class="social-icons">
+                <li>
+                    <i class="fab fa-google-plus-g"></i>
+                </li>
+                <li>
+                    <i class="fab fa-twitter"></i>
+                </li>
+                <li>
+                    <i class="fab fa-pinterest"></i>
+                </li>
+                <li>
+                    <i class="fab fa-instagram"></i>
+                </li>
+                <li>
+                    <i class="fab fa-linkedin-in"></i>
+                </li>
+                <li>
+                    <i class="fab fa-facebook-f"></i>
+                </li>
+            </ul>
+        </header>
+        <navbar class="navbar">
+            <div class="logo">
+                <span class="title">Arkitekt</span>
+                <div class="caption">
+                    <span>creative architecture theme</span>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <a href="#" class="link">Home</a>
+                    <hr>
+                    <span class="description">start here</span>
+                </li>
+                <li>
+                    <a href="#" class="link">About</a>
+                    <hr>
+                    <span class="description">who we are</span>
+                </li>
+                <li>
+                    <a href="#" class="link">Portfolio</a>
+                    <hr>
+                    <span class="description">our work</span>
+                </li>
+                <li>
+                    <a href="#" class="link">Services</a>
+                    <hr>
+                    <span class="description">what we offer</span>
+                </li>
+                <li>
+                    <a href="#" class="link">News</a>
+                    <hr>
+                    <span class="description">fresh news</span>
+                </li>
+                <li>
+                    <a href="#" class="link">Contact</a>
+                    <hr>
+                    <span class="description">get in touch</span>
+                </li>
+            </ul>
+        </navbar>
+        <main class="main">
+            <section>
+                <div class="image-slider">
+                    <div>
+                        <img data-lazy="assets/slider1.png" alt="slider-1"/>
+                    </div>
+                    <div>
+                        <img data-lazy="assets/slider1.png" alt="slider-1"/>
+                    </div>
+                    <div>
+                        <img data-lazy="assets/slider1.png" alt="slider-1"/>
+                    </div>
+                </div>
+            </section>
+            <section class="gallery">
+                <div class="item">
+                    <div class="icon">
+                        <i class="far fa-edit"></i>
+                    </div>
+                    <span class="title">Architecture Design</span>
+                    <p class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia possimus dignissimos consequuntur!</p>
+                </div>
+                <div class="item">
+                    <div class="icon">
+                        <i class="far fa-image"></i>
+                    </div>
+                    <span class="title">Building Contracts</span>
+                    <p class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia possimus dignissimos consequuntur!</p>
+                </div>
+                <div class="item">
+                    <div class="icon">
+                        <i class="fas fa-video"></i>                        
+                    </div>
+                    <span class="title">Building Surveys</span>
+                    <p class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia possimus dignissimos consequuntur!</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick-1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            console.log('loaded ....');
+            $('.image-slider').slick({
+                lazyLoad: 'ondemand',
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: true,
+                infinite: true,
+                speed: 300,
+                adaptiveHeight: true,
+                arrows: true
+            });
+        })
+    </script>
+</body>
+</html>
